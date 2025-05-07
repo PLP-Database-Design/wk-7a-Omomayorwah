@@ -22,19 +22,20 @@ INSERT INTO CustomerOrder (OrderId, CustomerName)
     VALUES (101,  'John Doe'),
             (102, 'Jane Smith'),
             (103, 'Emily Clark');
--- An SQL query to create a table named ProductDetails with three columns: OrderId, Product, and Quantity
+-- An SQL query to create a table named ProductDetails with four columns: ProductId, Product, Quantity and OrderId
 CREATE TABLE ProductDetails (
-    OrderId INT,
+    ProductId INT PRIMARY KEY,
     Product VARCHAR(100),
-    Quantity INT
+    Quantity INT,
+    OrderId INT
 );
 -- An SQL query to insert six records into the ProductDetails table
-INSERT INTO ProductDetails (OrderId, Product, QUANTITY)
-    VALUES (101, 'Laptop', 2),
-            (101, 'Mouse', 1),
-            (102, 'Tablet', 3),
-            (102, 'Keyboard', 1),
-            (102, 'Mouse', 2,
-            (103, 'Phone', 1);
+INSERT INTO ProductDetails (ProductId, Product, Quantity, OrderId)
+    VALUES (1, 'Laptop', 2, 101),
+            (2, 'Mouse', 1, 101),
+            (3, 'Tablet', 3, 102),
+            (4, 'Keyboard', 1, 102),
+            (5, 'Mouse', 2, 102),
+            (6, 'Phone', 1, 103);
 
     
